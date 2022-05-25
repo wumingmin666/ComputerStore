@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!--edge浏览器H5兼容设置-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--360浏览器H5兼容设置-->
+  <meta name="renderer" content="webkit" />
+  <script src="../bootstrap3/jquery-3.6.0.min.js"></script>
+  <script src="../bootstrap3/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap-theme.css">
+  <script src="../bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/jquery.cxselect.js" type="text/javascript"></script>
+    <title>收货管理</title>
+
+  <link rel="stylesheet" href="../css/address.css" type="text/css">
+</head>
+<body>
+<!--    第一个div-->
+<div class="container-fluid">
+  <div class="row" style="height: 77px;">
+    <div class="col-md-3" style="top: 20px;padding-left: 55px;">
+      <img src="../images/index/stumalllogo.png">
+    </div>
+    <div class="col-md-5 col-md-offset-4 " style="top: 28px">
+      <div class="col-md-2 col-md-offset-1 text-center">
+        <span class="bi-suit-heart"><a href="#"><font style="color: #0f0f0f"><strong>收藏</strong></font></a></span>
+      </div>
+      <div class="col-md-2 text-center">
+        <span class="bi-list-check"><a href="#"><font style="color: #0f0f0f"><strong>订单</strong></font></a></span>
+      </div>
+      <div class="col-md-2 text-center">
+        <span class="bi-cart-plus"><a href="#"><font style="color: #0f0f0f"><strong>购物车</strong></font></a></span>
+      </div>
+      <div class="col-md-2 text-center">
+                <span class="bi-steam"  class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font style="color: #0f0f0f"><strong>管理</strong></font><b class="caret" style="color: #0f0f0f"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="password.html">修改密码</a></li>
+                        <li><a href="userdata.html">个人资料</a></li>
+                        <li><a href="upload.html">上传头像</a></li>
+                        <li><a href="address.html">收获管理</a></li>
+                    </ul>
+                </span>
+      </div>
+      <div class="col-md-2 text-center">
+        <span class="bi-people"><a href="#"><font style="color: #0f0f0f"><strong>切换账号</strong></font></a></span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    第二个-->
+<div style="height: 50px;background: whitesmoke" >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4" style="height: 40px;margin-top: 5px">
+        <div class="col-md-2"><a href="index.html"><div class="text-center jiao" style="background: rgba(39,134,255,0.84);height: 40px;width: 40px;padding-top: 8px"><i class="bi-house-door-fill" style="font-size: larger;color: white"></i></div></a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#">秒杀</a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#">优惠卷</a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#"><div style="width: 60px">电脑VIP</div></a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#">外卖</a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#">超市</a></div>
+      </div>
+      <div class="col-md-3 col-md-offset-5" style="margin-top: 10px">
+        <input placeholder="请输入商品名称进行搜索">
+        <button id="search"><i class="bi-search"></i> </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    第三个-->
+<div class="container">
+  <div>
+    <div class="col-md-2" style="margin-top: 20px">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseOne">
+                我的订单
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ul style="list-style: none;padding: 0px">
+                <li><a href="#">全部订单</a></li>
+                <li><a href="#">待付款</a></li>
+                <li><a href="#">待退货</a></li>
+                <li><a href="#">待评价</a></li>
+                <li><a href="#">退货退款</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseTwo">
+                资料修改
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <ul style="list-style: none;padding: 0px">
+                <li><a href="password.html">修改密码</a></li>
+                <li><a href="userdata.html">个人资料</a></li>
+                <li><a href="upload.html">上传头像</a></li>
+                <li><a href="address.html"><b>收获管理</b></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 kuang" style="margin-top: 20px;margin-bottom: 20px">
+      <ul class="nav nav-tabs" role="tablist">
+        <li><a href="password.html">修改密码</a></li>
+        <li><a href="userdata.html">个人资料</a></li>
+        <li><a href="upload.html">上传头像</a></li>
+        <li class="active"><a href="address.html">收货管理</a></li>
+      </ul>
+      <div>
+        <table class="table table-striped">
+          <caption style="text-align: center">收获地址列表</caption>
+          <thead>
+          <tr>
+            <th>地址类型</th>
+            <th>收货人姓名</th>
+            <th>详细地址</th>
+            <th>联系电话</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody id="address-list"></tbody>
+        </table>
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#address" style="font-size: small;margin-bottom: 15px">+新增收货地址</button>
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="address" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog" style="width: 755px">
+            <div class="modal-content">
+              <div class="modal-body" id="element_id">
+                <form class="form-horizontal" role="form" id="form-add-new-address">
+                  <div class="form-group">
+                      <label for="receiver" class="col-md-2 control-label"><font color="red">*</font>收货人:</label>
+                      <div class="col-md-10">
+                        <input type="text" class="form-control" id="receiver" name="name"
+                               placeholder="请输入收货人姓名">
+                      </div>
+                    </div>
+                  <div class="form-group">
+                    <label for="province" class="col-md-2 control-label"><font color="red">*</font>省/直辖市:</label>
+                    <div class="col-md-4">
+                      <select class="form-control province" id="province" name="provinceName" data-required="false" data-first-title="请选择省/直辖市"></select>
+                    </div>
+                    <label for="city" class="col-md-2 control-label"><font color="red">*</font>城市:</label>
+                    <div class="col-md-4">
+                      <select class="form-control city" id="city" name="cityName" data-required="false" data-first-title="请选择城市"></select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="county" class="col-md-2 control-label"><font color="red">*</font>区/县:</label>
+                    <div class="col-md-4">
+                      <select class="form-control area" id="county" name="areaName" data-required="false" data-first-title="请选择区/县"></select>
+                    </div>
+                    <label for="fifth" class="col-md-2 control-label">邮政编码:</label>
+                    <div class="col-md-4">
+                      <input name="zip" type="text" class="form-control" id="fifth" placeholder="请输入邮政编码">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="detailed-address" class="col-md-2 control-label"><font color="red">*</font>详细地址:</label>
+                    <div class="col-md-10">
+                      <textarea name="address" class="form-control" id="detailed-address" rows="3"
+                                placeholder="请输入详细的收货地址、小区名称、门牌号等"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="seventh" class="col-md-2 control-label"><font color="red">*</font>手机:</label>
+                    <div class="col-md-4">
+                      <input name="phone" type="text" class="form-control" id="seventh"
+                             placeholder="请输入手机号码">
+                    </div>
+                    <label for="eighth" class="col-md-2 control-label">固话:</label>
+                    <div class="col-md-4">
+                      <input name="tel" type="text" class="form-control" id="eighth"
+                             placeholder="请输入固定电话号码">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="ninth" class="col-md-2 control-label"><font color="red">*</font>地址类型:</label>
+                    <div class="col-md-10">
+                      <input name="tag" type="text" class="form-control" id="ninth"
+                             placeholder="请输入地址类型，如:家、公司或者学校">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <div class="col-md-2"  style="line-height: 35px"><a data-dismiss="modal">返回</a></div>
+                <div class="col-md-2"><button type="button" class="btn btn-primary" id="save">保存</button></div>
+                <div class="col-md-2"><button type="button" class="btn btn-primary" id="rebuild">重置</button></div>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    第四个-->
+<div class="panel-footer" style="height: 160px; padding-top: 50px">
+  <div class="container text-center" style="height: 60px">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-2">
+        <span class="bi-hand-thumbs-up-fill" style="font-size: 25px"></span>
+        <p>品质保证</p>
+      </div>
+      <div class="col-md-2">
+        <span class="bi-person-video" style="font-size: 25px"></span>
+        <p>私人定制</p>
+      </div>
+      <div class="col-md-2" >
+        <span class="bi-mortarboard-fill" style="font-size: 25px"></span>
+        <p>学生特供</p>
+      </div>
+      <div class="col-md-2" >
+        <span class="bi-currency-bitcoin" style="font-size: 25px"></span>
+        <p>专属特权</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    第五个-->
+<div style="height: 190px;padding-top: 30px" >
+  <div class="container text-center" style=" height: 150px">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-1 text-left" style="height: 100px">
+        <img src="../images/index/stumalllogo.png">
+        <img src="../images/index/footerFont.png">
+      </div>
+      <div class="col-md-4" style="height: 100px">
+        <div class="row">
+          <div class="col-md-4" style="height: 100px">
+            <a href="#"><p style="font-size: small">买家帮助</p></a>
+            <p style="font-size: small;line-height: 10px; margin-top: 22px">新手指南</p>
+            <p style="font-size: small;line-height: 10px">服务保障</p>
+            <p style="font-size: small;line-height: 10px">常见问题</p>
+          </div>
+          <div class="col-md-4" style="height: 100px">
+            <p style="font-size: small">商家帮助</p>
+            <p style="font-size: small;line-height: 10px; margin-top: 22px">商家入驻</p>
+            <p style="font-size: small;line-height: 10px">商家后台</p>
+
+          </div>
+          <div class="col-md-4" style="height: 100px">
+            <p style="font-size: small">关于我们</p>
+            <p style="font-size: small;line-height: 10px; margin-top: 22px">关于圆心</p>
+            <p style="font-size: small;line-height: 10px">联系我们</p>
+            <p style="font-size: small;line-height: 10px">常见问题</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="height: 100px">
+        <div class="row">
+          <div class="col-md-8">
+            <p>电脑商城客户端</p>
+            <img src="../images/index/ios.png">
+            <img src="../images/index/android.png" style="margin-top: 2px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 20px">
+      <div class="col-md-12 text-center">
+        <p>
+          Copyright © 2022 dnsc.cn All Rights Reserved 京ICP备08963888号-45
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  function showAddressList(){
+    $.ajax({
+      url:"/addresses",
+      type:"Get",
+      data:null,
+      dataType: "JSON",
+      success:function (json) {
+        if(json.state==200){
+          let data=json.data;
+          for (let i = 0; i < data.length; i++) {
+            let tr='<tr>\n' +
+                    '              <td>tag</td>\n' +
+                    '              <td>name</td>\n' +
+                    '              <td>address</td>\n' +
+                    '              <td>phone</td>\n' +
+                    '              <td>\n' +
+                    '                <div class="btn-group">\n' +
+                    '                  <button type="button" class="btn btn-primary">修改</button>\n' +
+                    '                  <button onclick="deleteAddress(aid)" type="button" class="btn btn-danger">删除</button>\n' +
+                    '                  <button onclick="setDefault(aid)" type="button" class="btn btn-default">设为默认</button>\n' +
+                    '                </div>\n' +
+                    '              </td>\n' +
+                    '            </tr>';
+            tr=tr.replace("tag",data[i].tag);
+            tr=tr.replace("name",data[i].name);
+            tr=tr.replace("address",data[i].address);
+            tr=tr.replace("phone",data[i].phone);
+            tr=tr.replace("aid",data[i].aid);
+            tr=tr.replace("aid",data[i].aid);
+            $('#address-list').append(tr);
+            $('.btn-default:eq(0)').hide();
+          };
+        }else {
+          alert("地址信息加载失败")
+        }
+      },
+      error:function (xhr) {
+        alert("出现未知错误"+xhr.status)
+      }
+    });
+  }
+  function setDefault(aid){
+    $.ajax({
+      url:"/addresses/set_default/"+aid,
+      type:"Get",
+      data:null,
+      dataType: "JSON",
+      success:function (json) {
+        if(json.state==200){
+          document.getElementById("address-list").innerHTML = "";
+          showAddressList()
+        }else {
+          alert("设置失败")
+        }
+      },
+      error:function (xhr) {
+        alert("出现未知异常"+xhr.status)
+      }
+    });
+  }
+  function deleteAddress(aid){
+    $.ajax({
+      url:"/addresses/delete/"+aid,
+      type:"Get",
+      data:null,
+      dataType: "JSON",
+      success:function (json) {
+        if(json.state==200){
+          alert("删除成功")
+          document.getElementById("address-list").innerHTML = "";
+          showAddressList()
+        }else {
+          alert("删除失败")
+        }
+      },
+      error:function (xhr) {
+        alert("出现未知异常"+xhr.status)
+      }
+    });
+  }
+  $('#save').click(function(){
+    $.ajax({
+      url:"/addresses/add_new_address",
+      type:"post",
+      data:$("#form-add-new-address").serialize(),
+      dataType:"JSON",
+      success:function (json) {
+        if(json.state==200){
+          alert("新增地址成功");
+          document.getElementById("form-add-new-address").reset();
+          $("#address").modal('hide');
+          document.getElementById("address-list").innerHTML = "";
+          showAddressList()
+        }else {
+          alert("新增失败")
+        }
+      },
+      error:function (xhr) {
+        alert("新增地址时产生未知错误!"+xhr.status)
+      }
+    });
+  });
+  $('#rebuid').click(function () {
+    document.getElementById("form-add-new-address").reset();
+  })
+
+  $(document).ready(function (){
+    showAddressList();
+  });
+  $('#element_id').cxSelect({
+    url: '../js/cityData.min.json',
+    selects: ['province', 'city', 'area'],  // selects 为数组形式，请注意顺序
+  });
+  $.cxSelect.defaults.url = 'cityData.min.json';
+  $.cxSelect.defaults.emptyStyle = 'none';
+
+
+
+</script>
+</body>
+</html>

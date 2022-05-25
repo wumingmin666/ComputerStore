@@ -1,0 +1,38 @@
+.jiao{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+}
+input{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    height: 30px;
+    width: 300px;
+}
+#search{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    height: 30px;
+    width: 30px;
+    background: white;
+}
+.kuang{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    background: white;
+}

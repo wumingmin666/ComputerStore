@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!--edge浏览器H5兼容设置-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--360浏览器H5兼容设置-->
+  <meta name="renderer" content="webkit" />
+  <script src="../bootstrap3/jquery-3.6.0.min.js"></script>
+  <script src="../bootstrap3/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap-theme.css">
+  <script src="../bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+
+    <title>上传头像</title>
+  <link rel="stylesheet" href="../css/upload.css" type="text/css">
+</head>
+<body>
+<!--    第一个div-->
+<div class="container-fluid">
+  <div class="row" style="height: 77px;">
+    <div class="col-md-3" style="top: 20px;padding-left: 55px;">
+      <img src="../images/index/stumalllogo.png">
+    </div>
+    <div class="col-md-5 col-md-offset-4 " style="top: 28px">
+      <div class="col-md-2 col-md-offset-1 text-center">
+        <span class="bi-suit-heart"><a href="#"><font style="color: #0f0f0f"><strong>收藏</strong></font></a></span>
+      </div>
+      <div class="col-md-2 text-center">
+        <span class="bi-list-check"><a href="#"><font style="color: #0f0f0f"><strong>订单</strong></font></a></span>
+      </div>
+      <div class="col-md-2 text-center">
+        <span class="bi-cart-plus"><a href="#"><font style="color: #0f0f0f"><strong>购物车</strong></font></a></span>
+      </div>
+      <div class="col-md-2 text-center">
+                <span class="bi-steam"  class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font style="color: #0f0f0f"><strong>管理</strong></font><b class="caret" style="color: #0f0f0f"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="password.html">修改密码</a></li>
+                        <li><a href="userdata.html">个人资料</a></li>
+                        <li><a href="upload.html">上传头像</a></li>
+                        <li><a href="address.html">收获管理</a></li>
+                    </ul>
+                </span>
+      </div>
+      <div class="col-md-2 text-center">
+        <span class="bi-people"><a href="#"><font style="color: #0f0f0f"><strong>切换账号</strong></font></a></span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    第二个-->
+<div style="height: 50px;background: whitesmoke" >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4" style="height: 40px;margin-top: 5px">
+        <div class="col-md-2"><a href="index.html"><div class="text-center jiao" style="background: rgba(39,134,255,0.84);height: 40px;width: 40px;padding-top: 8px"><i class="bi-house-door-fill" style="font-size: larger;color: white"></i></div></a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#">秒杀</a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#">优惠卷</a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#"><div style="width: 60px">电脑VIP</div></a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#">外卖</a></div>
+        <div class="col-md-2" style="height:40px;text-align: center;line-height: 40px"><a href="#">超市</a></div>
+      </div>
+      <div class="col-md-3 col-md-offset-5" style="margin-top: 10px">
+        <input placeholder="请输入商品名称进行搜索">
+        <button id="search"><i class="bi-search"></i> </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    第三个-->
+<div class="container">
+  <div>
+    <div class="col-md-2" style="margin-top: 20px">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseOne">
+                我的订单
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ul style="list-style: none;padding: 0px">
+                <li><a href="#">全部订单</a></li>
+                <li><a href="#">待付款</a></li>
+                <li><a href="#">待退货</a></li>
+                <li><a href="#">待评价</a></li>
+                <li><a href="#">退货退款</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseTwo">
+                资料修改
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <ul style="list-style: none;padding: 0px">
+                <li><a href="password.html">修改密码</a></li>
+                <li><a href="userdata.html">个人资料</a></li>
+                <li><a href="upload.html"><b>上传头像</b></a></li>
+                <li><a href="address.html">收获管理</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 kuang" style="height: 290px;margin-top: 20px;margin-bottom: 20px">
+      <ul class="nav nav-tabs" role="tablist">
+        <li><a href="password.html">修改密码</a></li>
+        <li><a href="userdata.html">个人资料</a></li>
+        <li class="active"><a href="upload.html">上传头像</a></li>
+        <li><a href="address.html">收货管理</a></li>
+      </ul>
+      <form  id="upload_avatar" class="form-horizontal" role="form" style="margin-top: 15px">
+        <div class="form-group">
+          <div style="height: 100px;margin-left: 150px"><img id="img-avatar" style="height: 100%" src="../images/index/user.png"></div>
+          <label for="avatar" class="col-sm-2 control-label">上传头像:</label><br>
+          <input type="file" id="avatar" name="file">
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10 col-md-10">
+            <button type="button" id="btn_upload_avatar" class="btn btn-default">上传</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--    第四个-->
+<div class="panel-footer" style="height: 160px; padding-top: 50px">
+  <div class="container text-center" style="height: 60px">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-2">
+        <span class="bi-hand-thumbs-up-fill" style="font-size: 25px"></span>
+        <p>品质保证</p>
+      </div>
+      <div class="col-md-2">
+        <span class="bi-person-video" style="font-size: 25px"></span>
+        <p>私人定制</p>
+      </div>
+      <div class="col-md-2" >
+        <span class="bi-mortarboard-fill" style="font-size: 25px"></span>
+        <p>学生特供</p>
+      </div>
+      <div class="col-md-2" >
+        <span class="bi-currency-bitcoin" style="font-size: 25px"></span>
+        <p>专属特权</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--    第五个-->
+<div style="height: 190px;padding-top: 30px" >
+  <div class="container text-center" style=" height: 150px">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-1 text-left" style="height: 100px">
+        <img src="../images/index/stumalllogo.png">
+        <img src="../images/index/footerFont.png">
+      </div>
+      <div class="col-md-4" style="height: 100px">
+        <div class="row">
+          <div class="col-md-4" style="height: 100px">
+            <a href="#"><p style="font-size: small">买家帮助</p></a>
+            <p style="font-size: small;line-height: 10px; margin-top: 22px">新手指南</p>
+            <p style="font-size: small;line-height: 10px">服务保障</p>
+            <p style="font-size: small;line-height: 10px">常见问题</p>
+          </div>
+          <div class="col-md-4" style="height: 100px">
+            <p style="font-size: small">商家帮助</p>
+            <p style="font-size: small;line-height: 10px; margin-top: 22px">商家入驻</p>
+            <p style="font-size: small;line-height: 10px">商家后台</p>
+
+          </div>
+          <div class="col-md-4" style="height: 100px">
+            <p style="font-size: small">关于我们</p>
+            <p style="font-size: small;line-height: 10px; margin-top: 22px">关于圆心</p>
+            <p style="font-size: small;line-height: 10px">联系我们</p>
+            <p style="font-size: small;line-height: 10px">常见问题</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4" style="height: 100px">
+        <div class="row">
+          <div class="col-md-8">
+            <p>电脑商城客户端</p>
+            <img src="../images/index/ios.png">
+            <img src="../images/index/android.png" style="margin-top: 2px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 20px">
+      <div class="col-md-12 text-center">
+        <p>
+          Copyright © 2022 dnsc.cn All Rights Reserved 京ICP备08963888号-45
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    let avatar=$.cookie("avatar");
+    //将cookie值获取出来设置到头像的src属性
+    $("#img-avatar").attr("src",avatar);
+  })
+  //修改按钮
+  $('#btn_upload_avatar').click(function () {
+    $.ajax({
+      url: "/users/change_avatar",
+      type: "post",
+      data: new FormData($('#upload_avatar')[0]),
+      processData: false,//处理数据的形式，关闭处理数据
+      contentType:false,//提交数据的形式，关闭默认提交数据的形式
+      dataType: "JSON",
+      success: function (json) {
+        if (json.state == 200) {
+          alert("修改成功")
+          //将返回的头像地址设置到img标签，attr(属性，属性值)：给某个属性设置某个值
+          $('#img-avatar').attr("src",json.data)
+          //保存到cookie
+          $.cookie("avatar",json.data,{expires:7})
+        } else {
+          alert("修改失败")
+        }
+      },
+      error: function (xhr) {
+        alert("修改时产生未知的异常" + xhr.message)
+      }
+    });
+  });
+</script>
+</body>
+</html>

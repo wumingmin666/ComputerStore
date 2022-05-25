@@ -1,0 +1,21 @@
+#tupian{
+    background-image: url(../images/index/bg1.png);
+}
+input{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    height: 33px;
+}
+button{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 33px;
+    width: 85px;
+    background:green;
+}
